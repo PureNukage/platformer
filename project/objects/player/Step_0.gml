@@ -5,13 +5,12 @@ if !playerInput.key_right and !playerInput.key_left hspd -= sign(hspd)
 
 hspd = clamp(hspd,-max_movespeed,max_movespeed)
 
-x += hspd
-
 vspd = vspd + grav
 
 //Jump
 if place_meeting(x,y+1,block) and playerInput.key_jump {
 	vspd = jumpspeed	
+	jump = 1
 }
 
 //Check for horizontal collisions
@@ -21,7 +20,7 @@ if place_meeting(x+hspd,y,block) {
 	}
 	hspd = 0
 }
-x = x + hspd
+x += hspd
 
 //Check for vertical collisions
 if place_meeting(x,y+vspd,block) {
@@ -29,8 +28,9 @@ if place_meeting(x,y+vspd,block) {
 		y = y + sign(vspd)	
 	}
 	vspd = 0
+	jump = 0
 }
-y = y + vspd
+y += vspd
 
 
 

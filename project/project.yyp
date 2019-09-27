@@ -87,14 +87,6 @@
             }
         },
         {
-            "Key": "5f7f2826-51bf-4904-a512-5562e26d8d3c",
-            "Value": {
-                "id": "2da95009-d8e2-4b7b-88ce-50f7fe3f97f5",
-                "resourcePath": "scripts\\jump\\jump.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "74c5152a-8dc7-4a86-97f9-59857fc3ec3b",
             "Value": {
                 "id": "d357a664-3bfd-40ea-bf58-dae28fe8a43f",
@@ -151,6 +143,14 @@
             }
         },
         {
+            "Key": "a9a826aa-ff84-4cec-a985-97d661f597d1",
+            "Value": {
+                "id": "ad1594e4-dddd-41ca-90f3-ea8dba1e4a4c",
+                "resourcePath": "sprites\\s_block1\\s_block1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "aaac5ee5-f9a7-4efb-bda7-bc5a675b9e20",
             "Value": {
                 "id": "98caa0b7-0719-402f-8fc8-236e787c84b0",
@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "cefe63de-b848-4b18-9878-40e4bf09a6bf",
+            "Value": {
+                "id": "6d6d2c61-40fb-41b3-8536-5b1aadcff3d1",
+                "resourcePath": "objects\\block1\\block1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d19413d0-50dd-4236-9d87-e71ea1e287f2",
             "Value": {
                 "id": "34fdbadb-2f05-4c43-b4a8-0905b28cfa2d",
@@ -240,7 +248,7 @@
         }
     ],
     "script_order": [
-        "5f7f2826-51bf-4904-a512-5562e26d8d3c"
+        
     ],
     "tutorial": ""
 }
