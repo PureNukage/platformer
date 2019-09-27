@@ -32,6 +32,11 @@ if place_meeting(x,y+vspd,block) {
 }
 y += vspd
 
+if keyboard_check_pressed(vk_up) jumpspeed -= 1
+if keyboard_check_pressed(vk_down) jumpspeed += 1
+if keyboard_check_pressed(vk_right) grav += .1
+if keyboard_check_pressed(vk_left) grav -= .1
+
 
 
 
