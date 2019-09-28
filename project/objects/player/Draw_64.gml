@@ -2,3 +2,6 @@ draw_text(15,15,"Arrow keys Up and Down to change Jump Distance. Arrow keys Righ
 draw_text(15,30,"Leftclick to Dash")
 draw_text(15,45,"jump distance: " +string(jumpspeed*sign(jumpspeed)))
 draw_text(15,60,"gravity : "+string(grav))
+draw_text(15,75,"hspd: "+string(hspd))
+draw_text(15,90,"vspd: "+string(vspd))
+draw_text(15,105,"")

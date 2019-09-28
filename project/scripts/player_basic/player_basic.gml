@@ -30,10 +30,8 @@ if place_meeting(x,y+vspd,block) {
 	vspd = 0
 }
 
-len = point_distance(x,y,x+hspd,y+vspd)
-Direction = point_direction(x,y,x+hspd,y+vspd)
-x += lengthdir_x(len,Direction)
-y += lengthdir_y(len,Direction)
+x += hspd
+y += vspd
 
 if keyboard_check_pressed(vk_up) jumpspeed -= 1
 if keyboard_check_pressed(vk_down) jumpspeed += 1
