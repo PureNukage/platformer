@@ -5,9 +5,7 @@ hspd = lengthdir_x(movespeed,Direction)
 //movespeed = point_distance(0,0,hspd,vspd)
 //Direction = point_direction(0,0,hspd,vspd)
 
-grav = .6
-
-vspd = clamp(vspd,-15,15)
+vspd = clamp(vspd,-12,12)
 
 vspd = vspd + grav
 

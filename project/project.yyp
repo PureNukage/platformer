@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "172a5034-b64a-468c-93e6-58ddbf0da1bf",
+            "Value": {
+                "id": "896d3ce3-0147-4b35-8f40-521e0f034456",
+                "resourcePath": "sprites\\s_dino\\s_dino.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d905dd4-a756-4163-be9d-eb8e9cf27186",
             "Value": {
                 "id": "9b16436f-dbf4-4596-b867-0e0518772cda",

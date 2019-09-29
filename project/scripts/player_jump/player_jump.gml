@@ -32,7 +32,7 @@ repeat(abs(vspd)) {
 }
 
 if mouse_check_button_pressed(mb_left) {
-	movespeed = clamp(movespeed,point_distance(x,y,mouse_x,mouse_y),15)
+	movespeed = clamp(movespeed,point_distance(x,y,mouse_x,mouse_y),7)
 	Direction = point_direction(x,y,mouse_x,mouse_y)
 	vspd += lengthdir_y(movespeed,Direction)
 	states = states.leap

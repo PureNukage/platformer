@@ -23,14 +23,14 @@ repeat(abs(vyNew)) {
 repeat(abs(vxNew)) {
 
     // Move up slope
-    if (place_meeting(x + sign(vxNew), y, block) && !place_meeting(x + sign(vxNew), y - 1, block))
+    if (place_meeting(x+sign(vxNew),y,block) && !place_meeting(x+sign(vxNew),y-1,block))
         --y;
     
     // Move down slope
-    if (!place_meeting(x + sign(vxNew), y, block) && !place_meeting(x + sign(vxNew), y + 1, block) && place_meeting(x + sign(vxNew), y + 2, block))
+    if (!place_meeting(x+sign(vxNew),y,block) && !place_meeting(x+sign(vxNew),y+1,block) && place_meeting(x+sign(vxNew),y+2,block))
         ++y; 
 
-    if (!place_meeting(x + sign(vxNew), y, block))
+    if (!place_meeting(x+sign(vxNew),y,block))
         x += sign(vxNew); 
     else {
         hspd = 0;
