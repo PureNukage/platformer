@@ -48,9 +48,6 @@ repeat(abs(vspd)) {
     }
 }
 
-//x += hspd
-//y += vspd
-
 if keyboard_check_pressed(vk_up) jumpspeed -= 1
 if keyboard_check_pressed(vk_down) jumpspeed += 1
 if keyboard_check_pressed(vk_right) grav += .1

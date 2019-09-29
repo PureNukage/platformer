@@ -37,7 +37,3 @@ if mouse_check_button_pressed(mb_left) {
 	vspd += lengthdir_y(movespeed,Direction)
 	states = states.leap
 }
-
-//x += hspd
-//y += vspd
-

@@ -30,8 +30,3 @@ repeat(abs(vspd)) {
         break;
     }
 }
-
-//x += round(hspd)
-//y += round(vspd)
-
-
