@@ -11,26 +11,29 @@ vspd = clamp(vspd,-15,15)
 
 vspd = vspd + grav
 
+if place_meeting(x,y+1,block) states = states.basic
+
 //Check for horizontal collisions
-if place_meeting(x+hspd,y,block) {
-	hspd = round(hspd)
-	while !place_meeting(x+sign(hspd),y,block) {
-		x = x + sign(hspd)	
-	}
-	hspd = 0
+repeat(abs(hspd)) {
+    if (!place_meeting(x+sign(hspd),y+sign(vspd),block))
+        x += sign(hspd); 
+    else {
+        hspd = 0;
+        break;
+    }		
 }
 
 //Check for vertical collisions
-if place_meeting(x,y+vspd,block) {
-	vspd = round(vspd)
-	while !place_meeting(x,y+sign(vspd),block) {
-		y = y + sign(vspd)	
-	}
-	vspd = 0
-	states = states.basic
-	grav = .4
+repeat(abs(vspd)) {
+    if (!place_meeting(x+sign(hspd),y+sign(vspd),block))
+        y += sign(vspd); 
+    else {
+        vspd = 0;
+        break;
+    }
 }
 
-x += hspd
-y += vspd
+//x += round(hspd)
+//y += round(vspd)
+
 

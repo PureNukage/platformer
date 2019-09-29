@@ -1,5 +1,7 @@
 hspd = 0
 vspd = 0
+s_hspd = 0
+s_vspd = 0
 movespeed = 0
 max_movespeed = 8
 jumpspeed = -15

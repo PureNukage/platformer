@@ -5,7 +5,7 @@ if !playerInput.key_right and !playerInput.key_left hspd = lerp(hspd,0,fric)
 
 hspd = clamp(hspd,-max_movespeed,max_movespeed)
 
-vspd = vspd + grav
+if !place_meeting(x,y+1,block) vspd = vspd + grav
 
 //Jump
 if place_meeting(x,y+1,block) and playerInput.key_jump {
@@ -14,24 +14,42 @@ if place_meeting(x,y+1,block) and playerInput.key_jump {
 }
 
 //Check for horizontal collisions
-if place_meeting(x+hspd,y,block) {
-	while !place_meeting(x+sign(hspd),y,block) {
-		x = x + sign(hspd)	
-	}
-	hspd = 0
+// Horizontal
+repeat(abs(hspd)) {
+	
+    // Move up slope
+    if (place_meeting(x + sign(hspd), y, block) && place_meeting(x + sign(hspd), y - 1, block) && !place_meeting(x + sign(hspd), y - 2, block))
+        y -= 2;
+    else if (place_meeting(x + sign(hspd), y, block) && !place_meeting(x + sign(hspd), y - 1, block))
+        --y;
+    
+    // Move down slope
+    if (!place_meeting(x + sign(hspd), y, block) && !place_meeting(x + sign(hspd), y + 1, block) && !place_meeting(x + sign(hspd), y + 2, block) && place_meeting(x + sign(hspd), y + 3, block))
+        y += 2;
+    else if (!place_meeting(x + sign(hspd), y, block) && !place_meeting(x + sign(hspd), y + 1, block) && place_meeting(x + sign(hspd), y + 2, block))
+        ++y; 	
+	
+    if (!place_meeting(x+sign(hspd),y+sign(vspd),block))
+        x += sign(hspd); 
+    else {
+        hspd = 0;
+        break;
+    }
 }
 
 
 //Check for vertical collisions
-if place_meeting(x,y+vspd,block) {
-	while !place_meeting(x,y+sign(vspd),block) {
-		y = y + sign(vspd)	
-	}
-	vspd = 0
+repeat(abs(vspd)) {
+    if (!place_meeting(x+sign(hspd),y+sign(vspd),block))
+        y += sign(vspd); 
+    else {
+        vspd = 0;
+        break;
+    }
 }
 
-x += hspd
-y += vspd
+//x += hspd
+//y += vspd
 
 if keyboard_check_pressed(vk_up) jumpspeed -= 1
 if keyboard_check_pressed(vk_down) jumpspeed += 1

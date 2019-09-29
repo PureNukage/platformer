@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "4eb71bfe-7e05-4735-930b-856c3e456777",
+            "Value": {
+                "id": "24160364-957d-48e3-a3e6-d360346fd770",
+                "resourcePath": "sprites\\block_angle\\block_angle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "576fcd4c-89e6-41f6-afbf-64a1bc209b16",
             "Value": {
                 "id": "188f1db1-0064-4893-8c61-541288a969be",
@@ -100,6 +108,14 @@
                 "id": "6e0ad94e-72f3-44a4-8ae1-7d6134509fe0",
                 "resourcePath": "scripts\\player_basic\\player_basic.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6d1b45a6-c897-422d-aa55-8fc6cbdebe82",
+            "Value": {
+                "id": "2b2491f6-cd96-44d4-a10a-af85354be146",
+                "resourcePath": "objects\\block2\\block2.yy",
+                "resourceType": "GMObject"
             }
         },
         {
